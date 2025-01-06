@@ -2,21 +2,29 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/csci780example/GoTutorial/math/simplemath"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
+func create_pointer() *int {
+	a := 1
+	return &a
 }
 
-func main()  {
-	a:= 1
-	b := 2
-	c := simplemath.Max(a, b)
+// func max(a, b int) int {
+// 	if a > b {
+// 		return a
+// 	}
+// 	return b
+// }
 
-	fmt.Printf("Hello, World! %d\n", c)
+type Point struct {
+	x float64
+	y float64 
+}
+
+func main() {
+
+	a := create_pointer()
+
+	fmt.Printf("Hello, World! %d\n", a)
+
 }
